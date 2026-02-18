@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="G2 Global Intelligence - Servicios de Inteligencia Artificial para automatizar procesos, mejorar productividad y aumentar ventas.">
+    <meta name="keywords" content="inteligencia artificial, automatización, IA, productividad, ventas, G2GI">
+    <title>G2 Global Intelligence | Automatización con IA</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Particle System Background -->
+    <div class="particles-container" id="particles"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="G2GI Logo" class="logo-img"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="logo-fallback">
+                    <span class="logo-text">G2GI</span>
+                </div>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#soluciones" class="nav-link">Soluciones</a></li>
+                <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <button class="btn-primary nav-cta">Comenzar Ahora</button>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-label">
+                    <span>🤖 Inteligencia Artificial de Nueva Generación</span>
+                </div>
+                <h1 class="hero-title">
+                    Transformamos tu Negocio con <span class="glow-text">Inteligencia Artificial</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Automatizamos procesos, mejoramos la productividad y aumentamos tus ventas con soluciones de IA
+                    personalizadas para tu empresa.
+                </p>
+                <div class="hero-cta-group">
+                    <button class="btn-primary btn-large">Solicitar Demo Gratuita</button>
+                    <button class="btn-secondary btn-large">Ver Casos de Éxito</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="200">0</span>
+                        <span class="stat-label">Clientes Satisfechos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="85">0</span><span class="stat-symbol">%</span>
+                        <span class="stat-label">Aumento en Productividad</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="10">0</span><span class="stat-symbol">+</span>
+                        <span class="stat-label">Años de Experiencia</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="sphere glow-primary">
+                    <div class="sphere-inner"></div>
+                    <div class="sphere-ring ring-1"></div>
+                    <div class="sphere-ring ring-2"></div>
+                    <div class="sphere-ring ring-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <p class="social-proof-text">Confiado por empresas líderes en la industria</p>
+            <div class="partners-grid">
+                <div class="partner-logo">Tech Corp</div>
+                <div class="partner-logo">Innovation Labs</div>
+                <div class="partner-logo">Future Systems</div>
+                <div class="partner-logo">Digital Solutions</div>
+                <div class="partner-logo">AI Ventures</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">NUESTROS SERVICIOS</span>
+                <h2 class="section-title">Soluciones de IA para Cada Necesidad</h2>
+                <p class="section-subtitle">Ofrecemos servicios integrales de inteligencia artificial diseñados para
+                    transformar tu negocio</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card-flip">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-icon-placeholder gradient-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                    <path d="M2 17l10 5 10-5" />
+                                    <path d="M2 12l10 5 10-5" />
+                                </svg>
+                            </div>
+                            <div class="service-overlay">
+                                <h3 class="service-title-front">Automatización de Procesos</h3>
+                            </div>
+                        </div>
+                        <div class="service-card-back glass-card">
+                            <h3 class="service-title-back">Automatización de Procesos</h3>
+                            <p class="service-description">Optimiza tus operaciones con IA que automatiza tareas
+                                repetitivas, reduce errores y libera tiempo valioso para tu equipo.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">RPA</span>
+                                <span class="feature-tag">Workflows</span>
+                                <span class="feature-tag">Integración</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card-flip">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-icon-placeholder gradient-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                                </svg>
+                            </div>
+                            <div class="service-overlay">
+                                <h3 class="service-title-front">Análisis Predictivo</h3>
+                            </div>
+                        </div>
+                        <div class="service-card-back glass-card">
+                            <h3 class="service-title-back">Análisis Predictivo</h3>
+                            <p class="service-description">Toma decisiones informadas con modelos de IA que predicen
+                                tendencias, comportamientos y oportunidades de negocio.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Machine Learning</span>
+                                <span class="feature-tag">Big Data</span>
+                                <span class="feature-tag">Forecasting</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card-flip">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-icon-placeholder gradient-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
+                            </div>
+                            <div class="service-overlay">
+                                <h3 class="service-title-front">Automatización de Ventas</h3>
+                            </div>
+                        </div>
+                        <div class="service-card-back glass-card">
+                            <h3 class="service-title-back">Automatización de Ventas</h3>
+                            <p class="service-description">Aumenta tus conversiones con IA que califica leads,
+                                personaliza comunicaciones y optimiza tu embudo de ventas.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Lead Scoring</span>
+                                <span class="feature-tag">CRM AI</span>
+                                <span class="feature-tag">Personalización</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card-flip">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-icon-placeholder gradient-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                                </svg>
+                            </div>
+                            <div class="service-overlay">
+                                <h3 class="service-title-front">Chatbots Inteligentes</h3>
+                            </div>
+                        </div>
+                        <div class="service-card-back glass-card">
+                            <h3 class="service-title-back">Chatbots Inteligentes</h3>
+                            <p class="service-description">Atiende a tus clientes 24/7 con asistentes virtuales que
+                                comprenden, aprenden y resuelven consultas automáticamente.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">NLP</span>
+                                <span class="feature-tag">24/7</span>
+                                <span class="feature-tag">Multicanal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card-flip">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-icon-placeholder gradient-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 16v-4" />
+                                    <path d="M12 8h.01" />
+                                </svg>
+                            </div>
+                            <div class="service-overlay">
+                                <h3 class="service-title-front">Machine Learning</h3>
+                            </div>
+                        </div>
+                        <div class="service-card-back glass-card">
+                            <h3 class="service-title-back">Machine Learning</h3>
+                            <p class="service-description">Desarrollamos modelos personalizados que aprenden de tus
+                                datos para resolver problemas específicos de tu industria.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Deep Learning</span>
+                                <span class="feature-tag">Custom Models</span>
+                                <span class="feature-tag">Training</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card-flip">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-icon-placeholder gradient-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                    <line x1="8" y1="21" x2="16" y2="21" />
+                                    <line x1="12" y1="17" x2="12" y2="21" />
+                                </svg>
+                            </div>
+                            <div class="service-overlay">
+                                <h3 class="service-title-front">Consultoría en IA</h3>
+                            </div>
+                        </div>
+                        <div class="service-card-back glass-card">
+                            <h3 class="service-title-back">Consultoría en IA</h3>
+                            <p class="service-description">Estrategia personalizada para implementar IA en tu
+                                organización, desde la planificación hasta la ejecución completa.</p>
+                            <div class="service-features">
+                                <span class="feature-tag">Estrategia</span>
+                                <span class="feature-tag">Implementación</span>
+                                <span class="feature-tag">Soporte</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Showcase -->
+    <section class="solutions" id="soluciones">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">CASOS DE ÉXITO</span>
+                <h2 class="section-title">Resultados Reales, Impacto Medible</h2>
+                <p class="section-subtitle">Descubre cómo hemos transformado negocios con nuestras soluciones de IA</p>
+            </div>
+
+            <div class="solutions-grid">
+                <div class="solution-card glass-card">
+                    <div class="solution-icon">📈</div>
+                    <h3>+150% en Conversiones</h3>
+                    <p>E-commerce líder aumentó sus ventas implementando nuestro sistema de recomendaciones con IA</p>
+                    <div class="solution-metrics">
+                        <div class="metric">
+                            <span class="metric-value">3x</span>
+                            <span class="metric-label">ROI</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">6 meses</span>
+                            <span class="metric-label">Implementación</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card glass-card">
+                    <div class="solution-icon">⚡</div>
+                    <h3>70% Reducción en Tiempo</h3>
+                    <p>Empresa de logística automatizó procesos operativos reduciendo tiempos de gestión drásticamente
+                    </p>
+                    <div class="solution-metrics">
+                        <div class="metric">
+                            <span class="metric-value">40h</span>
+                            <span class="metric-label">Ahorradas/semana</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">95%</span>
+                            <span class="metric-label">Precisión</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card glass-card">
+                    <div class="solution-icon">💬</div>
+                    <h3>24/7 Atención al Cliente</h3>
+                    <p>Startup tech implementó chatbot inteligente atendiendo 10,000+ consultas mensuales
+                        automáticamente</p>
+                    <div class="solution-metrics">
+                        <div class="metric">
+                            <span class="metric-value">92%</span>
+                            <span class="metric-label">Satisfacción</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">60%</span>
+                            <span class="metric-label">Ahorro costos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-visual">
+                    <div class="about-image-placeholder glass-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-label">SOBRE G2GI</span>
+                    <h2 class="section-title">Líderes en Inteligencia Artificial Empresarial</h2>
+                    <p class="about-text">
+                        En <strong>G2 Global Intelligence</strong>, somos pioneros en la implementación de soluciones de
+                        inteligencia artificial que transforman negocios. Con más de una década de experiencia, hemos
+                        ayudado a cientos de empresas a automatizar procesos, aumentar su productividad y multiplicar
+                        sus ventas.
+                    </p>
+                    <p class="about-text">
+                        Nuestro equipo de expertos en IA, machine learning y automatización trabaja codo a codo contigo
+                        para diseñar soluciones personalizadas que se adaptan perfectamente a las necesidades únicas de
+                        tu organización.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <h4>Experiencia Comprobada</h4>
+                                <p>+10 años liderando proyectos de IA</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <h4>Soluciones Personalizadas</h4>
+                                <p>Adaptadas a tu industria y objetivos</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <h4>Soporte Continuo</h4>
+                                <p>Acompañamiento en cada etapa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">TESTIMONIOS</span>
+                <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card glass-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">
+                        "G2GI transformó completamente nuestra operación. La automatización con IA nos permitió escalar
+                        sin aumentar costos operativos. Increíble ROI."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JM</div>
+                        <div class="author-info">
+                            <h4>Juan Martínez</h4>
+                            <p>CEO, TechVentures</p>
+                        </div>
+                    </div>
+                    <div class="rating">★★★★★</div>
+                </div>
+
+                <div class="testimonial-card glass-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">
+                        "El equipo de G2GI no solo implementó la tecnología, sino que nos educó en el proceso. Ahora
+                        somos una empresa data-driven gracias a ellos."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AS</div>
+                        <div class="author-info">
+                            <h4>Ana Silva</h4>
+                            <p>Directora de Operaciones, LogiCorp</p>
+                        </div>
+                    </div>
+                    <div class="rating">★★★★★</div>
+                </div>
+
+                <div class="testimonial-card glass-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">
+                        "Nuestras ventas aumentaron un 180% en el primer año. El sistema de IA que desarrollaron superó
+                        todas nuestras expectativas."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RC</div>
+                        <div class="author-info">
+                            <h4>Roberto Campos</h4>
+                            <p>VP Ventas, Digital Solutions</p>
+                        </div>
+                    </div>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final" id="contacto">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">¿Listo para Transformar tu Negocio con IA?</h2>
+                <p class="cta-subtitle">Agenda una consulta gratuita y descubre cómo podemos ayudarte a alcanzar tus
+                    objetivos</p>
+                <div class="cta-buttons">
+                    <button class="btn-primary btn-large btn-pulse">Solicitar Demo Gratuita</button>
+                    <button class="btn-secondary btn-large">Hablar con un Experto</button>
+                </div>
+                <p class="cta-note">🔒 Sin compromiso • Consulta 100% gratuita • Respuesta en 24h</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="https://drive.google.com/uc?export=view&id=1SRk12LfXOCKZ162YyWAEECp_vr9zlluX"
+                            alt="G2GI Logo" class="logo-img"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="logo-fallback">
+                            <span class="logo-text">G2GI</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Transformando negocios con inteligencia artificial de vanguardia.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Facebook</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Servicios</h4>
+                    <ul class="footer-links">
+                        <li><a href="#servicios">Automatización de Procesos</a></li>
+                        <li><a href="#servicios">Análisis Predictivo</a></li>
+                        <li><a href="#servicios">Automatización de Ventas</a></li>
+                        <li><a href="#servicios">Chatbots Inteligentes</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="#nosotros">Sobre Nosotros</a></li>
+                        <li><a href="#soluciones">Casos de Éxito</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul class="footer-links">
+                        <li>info@g2gi.com</li>
+                        <li>+1 (555) 123-4567</li>
+                        <li>Global Headquarters</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 G2 Global Intelligence. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacidad</a>
+                    <a href="#">Términos</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Form Modal -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal-container">
+            <button class="modal-close" id="closeModal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="modal-content glass-card">
+                <div class="modal-header">
+                    <div class="modal-icon">📧</div>
+                    <h2 class="modal-title">Solicita tu Demo Gratuita</h2>
+                    <p class="modal-subtitle">Completa el formulario y un experto de G2GI se pondrá en contacto contigo
+                        en menos de 24 horas</p>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName" class="form-label">Nombre *</label>
+                            <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Juan"
+                                required>
+                            <span class="form-error" id="firstNameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName" class="form-label">Apellido *</label>
+                            <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Pérez"
+                                required>
+                            <span class="form-error" id="lastNameError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Corporativo *</label>
+                        <input type="email" id="email" name="email" class="form-input"
+                            placeholder="juan.perez@empresa.com" required>
+                        <span class="form-error" id="emailError"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="company" class="form-label">Empresa *</label>
+                            <input type="text" id="company" name="company" class="form-input"
+                                placeholder="Mi Empresa S.A." required>
+                            <span class="form-error" id="companyError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Teléfono</label>
+                            <input type="tel" id="phone" name="phone" class="form-input"
+                                placeholder="+1 (555) 123-4567">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service" class="form-label">Servicio de Interés *</label>
+                        <select id="service" name="service" class="form-select" required>
+                            <option value="">Selecciona un servicio</option>
+                            <option value="automatizacion">Automatización de Procesos</option>
+                            <option value="analitica">Análisis Predictivo</option>
+                            <option value="ventas">Automatización de Ventas</option>
+                            <option value="chatbot">Chatbots Inteligentes</option>
+                            <option value="ml">Machine Learning</option>
+                            <option value="consultoria">Consultoría en IA</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                        <span class="form-error" id="serviceError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Cuéntanos sobre tu proyecto</label>
+                        <textarea id="message" name="message" class="form-textarea" rows="4"
+                            placeholder="Describe brevemente qué necesitas automatizar o mejorar en tu negocio..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-checkbox">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <span class="checkbox-label">
+                                Acepto la <a href="#" class="form-link">política de privacidad</a> y el tratamiento de
+                                mis datos *
+                            </span>
+                        </label>
+                        <span class="form-error" id="privacyError"></span>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary btn-large btn-submit" id="submitBtn">
+                            <span class="btn-text">Enviar Solicitud</span>
+                            <span class="btn-loader" style="display: none;">
+                                <svg class="spinner" viewBox="0 0 50 50">
+                                    <circle cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="form-success" id="formSuccess" style="display: none;">
+                        <div class="success-icon">✓</div>
+                        <h3>¡Solicitud Enviada!</h3>
+                        <p>Gracias por tu interés. Un experto de G2GI se pondrá en contacto contigo pronto.</p>
+                    </div>
+
+                    <div class="form-note">
+                        🔒 Tus datos están protegidos y nunca serán compartidos con terceros
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
