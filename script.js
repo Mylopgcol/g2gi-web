@@ -220,8 +220,13 @@ function initContactForm() {
     const submitBtn = document.getElementById('submitBtn');
 
     // Open modal when CTA buttons are clicked
+    // IMPORTANT: Exclude the submit button inside the form to avoid blocking form submission
     const ctaButtons = document.querySelectorAll('.btn-primary, .btn-secondary');
     ctaButtons.forEach(button => {
+        // Skip the submit button inside the contact form
+        if (button.id === 'submitBtn' || button.closest('#contactForm')) {
+            return;
+        }
         button.addEventListener('click', function (e) {
             e.preventDefault();
             openModal();
@@ -444,7 +449,15 @@ async function sendEmail(formData) {
             throw new Error(`Error del webhook: ${response.status} ${response.statusText}`);
         }
 
-        const result = await response.json();
+        // Handle response - N8N may return JSON, text, or empty body
+        let result;
+        const responseText = await response.text();
+        try {
+            result = responseText ? JSON.parse(responseText) : { success: true };
+        } catch (parseError) {
+            // N8N returned non-JSON (e.g., "OK" or empty) - that's fine
+            result = { success: true, rawResponse: responseText };
+        }
         console.log('✅ Lead enviado a N8N exitosamente:', result);
 
         return result;
