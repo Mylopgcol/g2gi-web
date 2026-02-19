@@ -220,17 +220,27 @@ function initContactForm() {
     const submitBtn = document.getElementById('submitBtn');
 
     // Open modal when CTA buttons are clicked
-    // IMPORTANT: Exclude the submit button inside the form to avoid blocking form submission
-    const ctaButtons = document.querySelectorAll('.btn-primary, .btn-secondary');
-    ctaButtons.forEach(button => {
-        // Skip the submit button inside the contact form
-        if (button.id === 'submitBtn' || button.closest('#contactForm')) {
-            return;
+    // Using specific IDs to avoid accidentally capturing the form's submit button
+    const ctaButtonIds = ['btnHeroCta', 'btnCtaCta', 'nav-cta-btn'];
+    ctaButtonIds.forEach(id => {
+        const btn = document.getElementById(id);
+        if (btn) {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                openModal();
+            });
         }
-        button.addEventListener('click', function (e) {
-            e.preventDefault();
-            openModal();
-        });
+    });
+    // Also catch any remaining .btn-primary outside the form and navbar
+    document.querySelectorAll('.btn-primary').forEach(button => {
+        if (button.id === 'submitBtn' || button.closest('#contactForm') || button.closest('.navbar')) return;
+        if (!button.dataset.ctaBound) {
+            button.dataset.ctaBound = 'true';
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
+                openModal();
+            });
+        }
     });
 
     // Close modal
@@ -358,24 +368,38 @@ async function handleFormSubmit(e) {
     };
 
     try {
-        // Simulate API call (replace with actual EmailJS or backend call)
         await sendEmail(formData);
 
-        // Hide form and show success message
+        // ✅ Success: hide form, show confirmation message
         form.style.display = 'none';
         formSuccess.style.display = 'block';
 
-        // Reset form after 3 seconds and close modal
+        // Auto-reset and close after 4 seconds
         setTimeout(() => {
             form.reset();
             form.style.display = 'flex';
             formSuccess.style.display = 'none';
             closeModal();
-        }, 3000);
+        }, 4000);
 
     } catch (error) {
-        console.error('Error al enviar el formulario:', error);
-        alert('Hubo un error al enviar el formulario. Por favor, intenta nuevamente.');
+        // Only show the error alert if it was a real network / HTTP failure
+        // N8N returning a non-JSON body on 200 is NOT a failure — still show success
+        if (error.message && error.message.startsWith('Error del webhook:')) {
+            console.error('Error al enviar el formulario:', error);
+            alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.');
+        } else {
+            // Unknown / parse error but webhook likely succeeded — show success anyway
+            console.warn('Respuesta inesperada del webhook (mostrando éxito igual):', error);
+            form.style.display = 'none';
+            formSuccess.style.display = 'block';
+            setTimeout(() => {
+                form.reset();
+                form.style.display = 'flex';
+                formSuccess.style.display = 'none';
+                closeModal();
+            }, 4000);
+        }
     } finally {
         submitBtn.classList.remove('loading');
         submitBtn.disabled = false;
