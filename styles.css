@@ -300,12 +300,28 @@ h3 {
     transition: all 0.3s ease;
     cursor: pointer;
     font-size: 16px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-secondary:hover {
     border-color: var(--primary-500);
     background: rgba(var(--primary-rgb), 0.1);
     transform: translateY(-2px);
+}
+
+/* WhatsApp button specific styling */
+.btn-whatsapp {
+    gap: 6px;
+}
+
+.btn-whatsapp:hover {
+    border-color: #25D366;
+    background: rgba(37, 211, 102, 0.08);
+    color: #25D366;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.2);
 }
 
 .btn-large {
@@ -543,6 +559,71 @@ h3 {
 
 .glow-primary {
     filter: drop-shadow(0 0 20px rgba(var(--primary-rgb), 0.6)) drop-shadow(0 0 40px rgba(var(--primary-rgb), 0.4)) drop-shadow(0 0 60px rgba(var(--primary-rgb), 0.3));
+}
+
+/* =====================================================
+   SPHERE LOGO - Logo centrado dentro de la esfera
+   ===================================================== */
+.sphere-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sphere-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    height: 55%;
+    /* Counter-rotate to keep logo upright while sphere floats */
+    animation: counter-float 6s ease-in-out infinite;
+}
+
+.sphere-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Subtle glow matching brand color */
+    filter: drop-shadow(0 0 16px rgba(var(--primary-rgb), 0.8)) brightness(1.1);
+    display: block;
+}
+
+.sphere-logo-fallback {
+    display: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 64px;
+    font-weight: 800;
+    color: var(--primary-400);
+    text-shadow: 0 0 30px rgba(var(--primary-rgb), 0.8);
+    letter-spacing: -2px;
+}
+
+/* Counter-animation keeps logo visually stable while sphere floats */
+@keyframes counter-float {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(-50%, calc(-50% + 20px)) rotate(-2deg);
+    }
+
+    50% {
+        transform: translate(-50%, calc(-50% + 10px)) rotate(2deg);
+    }
+
+    75% {
+        transform: translate(-50%, calc(-50% + 30px)) rotate(-1deg);
+    }
 }
 
 /* =====================================================
@@ -1463,6 +1544,15 @@ h3 {
         height: 400px;
     }
 
+    .sphere-logo {
+        width: 50%;
+        height: 50%;
+    }
+
+    .sphere-logo-fallback {
+        font-size: 52px;
+    }
+
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1525,8 +1615,23 @@ h3 {
     }
 
     .sphere {
-        width: 280px;
-        height: 280px;
+        width: 260px;
+        height: 260px;
+    }
+
+    /* Logo inside sphere - scaled for mobile */
+    .sphere-logo {
+        width: 44%;
+        height: 44%;
+        /* Keep it centered precisely on small screens */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .sphere-logo-fallback {
+        font-size: 38px;
+        letter-spacing: -1px;
     }
 
     .services-grid {
