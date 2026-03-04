@@ -747,7 +747,18 @@ h3 {
     transform-style: preserve-3d;
 }
 
-.service-card-flip:hover .service-card-inner,
+/* Activar hover SOLO en computadoras (dispositivos con mouse) */
+@media (hover: hover) {
+    .service-card-flip:hover .service-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .service-card-flip:hover .service-bg-image {
+        transform: scale(1.05);
+    }
+}
+
+/* Clase controlada por script.js para que gire suavemente en móviles */
 .service-card-flip.flipped .service-card-inner {
     transform: rotateY(180deg);
 }
@@ -1689,4 +1700,26 @@ h3 {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+/* =====================================================
+   ESTILOS PARA LA IMAGEN DE 'SOBRE NOSOTROS'
+   ===================================================== */
+.about-image-container {
+    width: 100%;
+    aspect-ratio: 1;
+    /* Mantiene la forma cuadrada/proporcionada */
+    padding: 12px;
+    /* Crea un marco delgado de cristal alrededor de la imagen */
+    display: flex;
+}
+
+.about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    /* Bordes redondeados para que coincida con el diseño */
+    filter: brightness(0.9);
+    /* Opcional: la oscurece un 10% para mantener el tono Dark Mode */
 }
