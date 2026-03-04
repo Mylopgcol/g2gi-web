@@ -770,45 +770,26 @@ h3 {
     border: 1px solid rgba(var(--primary-rgb), 0.15);
 }
 
-.service-icon-placeholder {
+/* =====================================================
+   NUEVOS ESTILOS PARA IMÁGENES DE SERVICIOS
+   ===================================================== */
+.service-bg-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgba(255, 255, 255, 0.3);
+    object-fit: cover;
+    /* Asegura que la imagen llene el espacio sin deformarse */
+    z-index: 0;
     transition: transform 0.4s ease;
+    filter: brightness(0.8);
+    /* Oscurece un poco la imagen base para resaltar el texto */
 }
 
-.service-card-flip:hover .service-icon-placeholder {
+/* Mantiene el efecto de zoom al pasar el mouse */
+.service-card-flip:hover .service-bg-image {
     transform: scale(1.05);
-}
-
-.gradient-1 {
-    background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.2), rgba(var(--primary-rgb), 0.05));
-}
-
-.gradient-2 {
-    background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(34, 197, 94, 0.05));
-}
-
-.gradient-3 {
-    background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(168, 85, 247, 0.05));
-}
-
-.gradient-4 {
-    background: linear-gradient(135deg, rgba(249, 115, 22, 0.2), rgba(249, 115, 22, 0.05));
-}
-
-.gradient-5 {
-    background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(236, 72, 153, 0.05));
-}
-
-.gradient-6 {
-    background: linear-gradient(135deg, rgba(14, 165, 233, 0.2), rgba(14, 165, 233, 0.05));
 }
 
 .service-overlay {
